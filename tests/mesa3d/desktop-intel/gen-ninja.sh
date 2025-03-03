@@ -18,6 +18,7 @@ ANDROID_PLATFORM="${ANDROID_PLATFORM}" NDK_PATH="${NDK_PATH}" \
 envsubst < "${SCRIPT_DIR}/${AOSP_X86_64}.template" > "${MESON_LOCAL_PATH}/${AOSP_X86_64}"
 
 PATH="${MESA_CLC_PATH}:${PATH}" \
+LD_LIBRARY_PATH="${HOME}/.local/lib:${LD_LIBRARY_PATH}" \
 meson setup \
     --cross-file "${AOSP_X86_64}" \
     --libdir lib64 \

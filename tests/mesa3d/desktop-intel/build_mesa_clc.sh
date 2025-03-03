@@ -7,6 +7,7 @@ set -xe
 SRC_PATH="$1"
 BUILD_PATH="$2"
 
+PKG_CONFIG_PATH="${HOME}/.local/lib/pkgconfig" \
 meson setup \
     -Dplatforms= \
     -Dglx=disabled \
